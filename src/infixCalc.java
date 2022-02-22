@@ -13,7 +13,7 @@ public class infixCalc {
 		nums.offer(11);
 		nums.offer(31);
 		nums.offer(21);
-		nums.offer(5);
+		nums.offer(5); // top
 		
 		Stack.printNums(nums);
 
