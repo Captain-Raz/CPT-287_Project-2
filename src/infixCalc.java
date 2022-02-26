@@ -1,10 +1,14 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class infixCalc {
 	
+	static final String INPUT_FILE_TXT = "src/inputFile.txt";//path to the input file
 	static Stack nums = new Stack(); // Stack for all numbers
 	static Stack operands = new Stack(); // Stack for everything less numbers
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		
 		nums.offer(1);
 		nums.offer(3);
@@ -17,6 +21,15 @@ public class infixCalc {
 		
 		Stack.printNums(nums);
 
-	}
+		Scanner fScan;
+		String infixEquation = "";
+		fScan = new Scanner(new File(INPUT_FILE_TXT));
+		while (fScan.hasNext()) {
+			infixEquation = (fScan.nextLine());
+			System.out.println(infixEquation);
+		}
+		fScan.close();
+		
+	}//end main
 
 }
