@@ -25,7 +25,7 @@ public class infixCalc {
 		String infixEquation = "";
 		fScan = new Scanner(new File(INPUT_FILE_TXT));
 		while (fScan.hasNext()) {
-			infixEquation = (fScan.nextLine());
+			infixEquation = (fScan.nextLine().replaceAll(" ", ""));//removes the white space
 			System.out.println(infixEquation);
 		}
 		fScan.close();
