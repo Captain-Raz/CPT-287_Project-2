@@ -51,6 +51,21 @@ public class Stack<T> implements basicStack {
 	}
 	
 	/* *
+	 * * @return: second to Top's data 
+	 * * Does Not Remove Top from Stack
+	 * */
+	
+	public T peekNext() {
+		if (isEmpty()) { 
+			throw new NoSuchElementException("Accessing empty stack"); 
+		}else if (size()<2) {
+			throw new NoSuchElementException("there is no second element");
+		} else {
+        return top.next.data;// returns the second to last item pushed without removing it from the queue
+		}
+	}
+	
+	/* *
 	 * * @return: Top's data
 	 * * Removes Top from Stack, and decrements numOfItems
 	 * */
