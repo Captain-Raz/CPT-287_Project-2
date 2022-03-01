@@ -1,6 +1,3 @@
-
-import java.util.NoSuchElementException;
-
 public interface basicStack<T> {
 
 	/* * Returns size of stack less 1
